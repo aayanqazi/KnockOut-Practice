@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.js"></script>
+</head>
+<body>
+    <p> First Name: <span data-bind="text: firstName"</span></p>
+    <p> Last  Name: <span data-bind="text: lastName"</span></p>
+    First Name: <input type="text" name="names" data-bind="value: firstName" /> <br /> <br />
+    Last Name :<input type="text" name="names" data-bind="value: lastName" />
+    <script type="text/javascript">
+        function viewmodel() {
+            this.firstName = ko.observable("Arsalan");
+            this.lastName = ko.observable("Sabir");
+        }
+        ko.applyBindings(new viewmodel());
+    </script>
+
+</body>
+</html>
